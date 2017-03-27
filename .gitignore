@@ -1,0 +1,10 @@
+*-rescue.lib
+*.gbr
+*.drl
+*.ods
+*.dsn
+*.ses
+*cache.lib
+*.kicad_pcb-bak
+*.bak
+*.bin

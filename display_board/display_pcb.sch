@@ -1,0 +1,643 @@
+EESchema Schematic File Version 2
+LIBS:display_pcb-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:tps61040dbv
+LIBS:display_pcb-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X24 P2
+U 1 1 58CBD9D5
+P 6950 3300
+F 0 "P2" H 6950 4550 50  0000 C CNN
+F 1 "FFC24x0.5mm" V 7050 3300 50  0000 C CNN
+F 2 "injex:ffc-24-0.5mm" H 6950 3300 50  0001 C CNN
+F 3 "" H 6950 3300 50  0000 C CNN
+	1    6950 3300
+	1    0    0    1   
+$EndComp
+$Comp
+L INDUCTOR_SMALL L1
+U 1 1 58CBDAA4
+P 2300 3500
+F 0 "L1" H 2300 3600 50  0000 C CNN
+F 1 "4.7 uH" H 2300 3450 50  0000 C CNN
+F 2 "injex:CDRH2D18" H 2300 3500 50  0001 C CNN
+F 3 "" H 2300 3500 50  0000 C CNN
+	1    2300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky_Small D2
+U 1 1 58CBDB69
+P 2800 3500
+F 0 "D2" H 2750 3580 50  0000 L CNN
+F 1 "D_Schottky_Small" H 2520 3420 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-123" V 2800 3500 50  0001 C CNN
+F 3 "" V 2800 3500 50  0000 C CNN
+	1    2800 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L TPS61040 D1
+U 1 1 58CBE2EA
+P 2250 3950
+F 0 "D1" H 2350 4150 60  0000 C CNN
+F 1 "TPS61040" H 2000 4150 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 2300 3850 60  0001 C CNN
+F 3 "" H 2300 3850 60  0000 C CNN
+	1    2250 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C8
+U 1 1 58CBE418
+P 6300 4250
+F 0 "C8" H 6310 4320 50  0000 L CNN
+F 1 "4.7uF" H 6310 4170 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 6300 4250 50  0001 C CNN
+F 3 "" H 6300 4250 50  0000 C CNN
+	1    6300 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6400 4250 6750 4250
+$Comp
+L R_Small R3
+U 1 1 58CC11B0
+P 6300 4000
+F 0 "R3" H 6330 4020 50  0000 L CNN
+F 1 "910k" H 6330 3960 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" H 6300 4000 50  0001 C CNN
+F 3 "" H 6300 4000 50  0000 C CNN
+	1    6300 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58CC12B9
+P 6100 4100
+F 0 "#PWR01" H 6100 3850 50  0001 C CNN
+F 1 "GND" H 6100 3950 50  0000 C CNN
+F 2 "" H 6100 4100 50  0000 C CNN
+F 3 "" H 6100 4100 50  0000 C CNN
+	1    6100 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 4000 6150 4000
+Wire Wire Line
+	6150 4000 6150 4250
+Wire Wire Line
+	6150 4250 6200 4250
+Wire Wire Line
+	6100 4100 6150 4100
+Connection ~ 6150 4100
+Wire Wire Line
+	6400 4000 6500 4000
+$Comp
+L +3.3V #PWR02
+U 1 1 58CC62BC
+P 1500 2000
+F 0 "#PWR02" H 1500 1850 50  0001 C CNN
+F 1 "+3.3V" H 1500 2140 50  0000 C CNN
+F 2 "" H 1500 2000 50  0000 C CNN
+F 3 "" H 1500 2000 50  0000 C CNN
+	1    1500 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR03
+U 1 1 58CC6312
+P 2400 2000
+F 0 "#PWR03" H 2400 1850 50  0001 C CNN
+F 1 "VCC" H 2400 2150 50  0000 C CNN
+F 2 "" H 2400 2000 50  0000 C CNN
+F 3 "" H 2400 2000 50  0000 C CNN
+	1    2400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58CC63AA
+P 1500 2450
+F 0 "#PWR04" H 1500 2200 50  0001 C CNN
+F 1 "GND" H 1500 2300 50  0000 C CNN
+F 2 "" H 1500 2450 50  0000 C CNN
+F 3 "" H 1500 2450 50  0000 C CNN
+	1    1500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1_Small C4
+U 1 1 58CC63D0
+P 1650 2150
+F 0 "C4" H 1660 2220 50  0000 L CNN
+F 1 "10 uF" H 1660 2070 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 1650 2150 50  0001 C CNN
+F 3 "" H 1650 2150 50  0000 C CNN
+	1    1650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1_Small C5
+U 1 1 58CC640C
+P 2200 2150
+F 0 "C5" H 2210 2220 50  0000 L CNN
+F 1 "10 uF" H 2210 2070 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 2200 2150 50  0001 C CNN
+F 3 "" H 2200 2150 50  0000 C CNN
+	1    2200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 58CC6443
+P 1300 2150
+F 0 "C1" H 1310 2220 50  0000 L CNN
+F 1 "0.1 uF" H 1310 2070 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1300 2150 50  0001 C CNN
+F 3 "" H 1300 2150 50  0000 C CNN
+	1    1300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C6
+U 1 1 58CC6475
+P 2550 2150
+F 0 "C6" H 2560 2220 50  0000 L CNN
+F 1 "0.1 uF" H 2560 2070 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2550 2150 50  0001 C CNN
+F 3 "" H 2550 2150 50  0000 C CNN
+	1    2550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2050 1300 2000
+Wire Wire Line
+	1300 2000 1650 2000
+Wire Wire Line
+	1650 2000 1650 2050
+Connection ~ 1500 2000
+Wire Wire Line
+	2200 2050 2200 2000
+Wire Wire Line
+	2200 2000 2550 2000
+Wire Wire Line
+	2550 2000 2550 2050
+Connection ~ 2400 2000
+Wire Wire Line
+	2550 2450 2550 2250
+Wire Wire Line
+	2200 2250 2200 2450
+Wire Wire Line
+	1650 2450 1650 2250
+Wire Wire Line
+	1300 2250 1300 2450
+Wire Wire Line
+	1900 3500 1900 3900
+Wire Wire Line
+	1900 3900 2000 3900
+$Comp
+L +3.3V #PWR05
+U 1 1 58CC6C92
+P 1400 3550
+F 0 "#PWR05" H 1400 3400 50  0001 C CNN
+F 1 "+3.3V" H 1400 3690 50  0000 C CNN
+F 2 "" H 1400 3550 50  0000 C CNN
+F 3 "" H 1400 3550 50  0000 C CNN
+	1    1400 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3550 1400 3600
+Connection ~ 1900 3500
+Wire Wire Line
+	2550 3500 2700 3500
+Wire Wire Line
+	2650 3500 2650 3900
+Wire Wire Line
+	2650 3900 2450 3900
+$Comp
+L CP1_Small C3
+U 1 1 58CC6E9D
+P 1500 3750
+F 0 "C3" H 1510 3820 50  0000 L CNN
+F 1 "10 uF" H 1510 3670 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 1500 3750 50  0001 C CNN
+F 3 "" H 1500 3750 50  0000 C CNN
+	1    1500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 58CC6EFE
+P 1300 3750
+F 0 "C2" H 1310 3820 50  0000 L CNN
+F 1 "100n" H 1310 3670 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1300 3750 50  0001 C CNN
+F 3 "" H 1300 3750 50  0000 C CNN
+	1    1300 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3600 1300 3650
+Wire Wire Line
+	1500 3600 1500 3650
+Wire Wire Line
+	1300 3850 1300 3900
+Wire Wire Line
+	1300 3900 1500 3900
+Wire Wire Line
+	1500 3900 1500 3850
+$Comp
+L GND #PWR06
+U 1 1 58CC7012
+P 1400 3950
+F 0 "#PWR06" H 1400 3700 50  0001 C CNN
+F 1 "GND" H 1400 3800 50  0000 C CNN
+F 2 "" H 1400 3950 50  0000 C CNN
+F 3 "" H 1400 3950 50  0000 C CNN
+	1    1400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3950 1400 3900
+Connection ~ 1400 3900
+Connection ~ 2650 3500
+$Comp
+L C_Small C7
+U 1 1 58CC730E
+P 3000 3700
+F 0 "C7" H 3010 3770 50  0000 L CNN
+F 1 "47 pF" H 3010 3620 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3000 3700 50  0001 C CNN
+F 3 "" H 3000 3700 50  0000 C CNN
+	1    3000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3500 3550 3500
+Wire Wire Line
+	3000 3500 3000 3600
+$Comp
+L GND #PWR07
+U 1 1 58CC74A1
+P 1950 4100
+F 0 "#PWR07" H 1950 3850 50  0001 C CNN
+F 1 "GND" H 1950 3950 50  0000 C CNN
+F 2 "" H 1950 4100 50  0000 C CNN
+F 3 "" H 1950 4100 50  0000 C CNN
+	1    1950 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4100 1950 4050
+Wire Wire Line
+	1950 4050 2000 4050
+Wire Wire Line
+	3000 3800 3000 4100
+$Comp
+L R_Small R1
+U 1 1 58CC7831
+P 3400 3650
+F 0 "R1" V 3430 3670 50  0000 L CNN
+F 1 "300k" H 3430 3610 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" H 3400 3650 50  0001 C CNN
+F 3 "" H 3400 3650 50  0000 C CNN
+	1    3400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT-RESCUE-display_pcb RV1
+U 1 1 58CC79A0
+P 3400 3950
+F 0 "RV1" H 3400 3870 50  0000 C CNN
+F 1 "500k" H 3400 3950 50  0000 C CNN
+F 2 "injex:BOURNS-3296W" H 3400 3950 50  0001 C CNN
+F 3 "" H 3400 3950 50  0000 C CNN
+	1    3400 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 3800 3400 3750
+Wire Wire Line
+	3400 3800 3550 3800
+Wire Wire Line
+	3550 3800 3550 3950
+Wire Wire Line
+	2550 4100 3400 4100
+Wire Wire Line
+	3400 3500 3400 3550
+Connection ~ 3000 3500
+$Comp
+L R_Small R2
+U 1 1 58CC7C24
+P 3400 4250
+F 0 "R2" H 3430 4270 50  0000 L CNN
+F 1 "120k" H 3430 4210 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" H 3400 4250 50  0001 C CNN
+F 3 "" H 3400 4250 50  0000 C CNN
+	1    3400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 58CC7CD7
+P 3400 4450
+F 0 "#PWR08" H 3400 4200 50  0001 C CNN
+F 1 "GND" H 3400 4300 50  0000 C CNN
+F 2 "" H 3400 4450 50  0000 C CNN
+F 3 "" H 3400 4450 50  0000 C CNN
+	1    3400 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4100 3400 4150
+Wire Wire Line
+	3400 4350 3400 4450
+$Comp
+L VCC #PWR09
+U 1 1 58CC7FB2
+P 3550 3450
+F 0 "#PWR09" H 3550 3300 50  0001 C CNN
+F 1 "VCC" H 3550 3600 50  0000 C CNN
+F 2 "" H 3550 3450 50  0000 C CNN
+F 3 "" H 3550 3450 50  0000 C CNN
+	1    3550 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3500 3550 3450
+Connection ~ 3400 3500
+Wire Wire Line
+	6650 2000 6650 2450
+Wire Wire Line
+	6650 2450 6750 2450
+Wire Wire Line
+	6750 2350 6650 2350
+Connection ~ 6650 2350
+Wire Wire Line
+	6650 2250 6750 2250
+Connection ~ 6650 2250
+Wire Wire Line
+	6750 2150 6650 2150
+Connection ~ 6650 2150
+$Comp
+L GND #PWR010
+U 1 1 58CC881B
+P 6650 2000
+F 0 "#PWR010" H 6650 1750 50  0001 C CNN
+F 1 "GND" H 6650 1850 50  0000 C CNN
+F 2 "" H 6650 2000 50  0000 C CNN
+F 3 "" H 6650 2000 50  0000 C CNN
+	1    6650 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR011
+U 1 1 58CC8927
+P 6550 2500
+F 0 "#PWR011" H 6550 2350 50  0001 C CNN
+F 1 "+3.3V" H 6550 2640 50  0000 C CNN
+F 2 "" H 6550 2500 50  0000 C CNN
+F 3 "" H 6550 2500 50  0000 C CNN
+	1    6550 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2500 6550 2550
+Wire Wire Line
+	6550 2550 6750 2550
+$Comp
+L CONN_02X10 P1
+U 1 1 58CC8CE3
+P 4850 3000
+F 0 "P1" H 4850 3550 50  0000 C CNN
+F 1 "CONN_02X10" V 4850 3000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x10_Pitch2.54mm" H 4850 1800 50  0001 C CNN
+F 3 "" H 4850 1800 50  0000 C CNN
+	1    4850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 58CC8E51
+P 4450 2500
+F 0 "#PWR012" H 4450 2250 50  0001 C CNN
+F 1 "GND" H 4450 2350 50  0000 C CNN
+F 2 "" H 4450 2500 50  0000 C CNN
+F 3 "" H 4450 2500 50  0000 C CNN
+	1    4450 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR013
+U 1 1 58CC8E98
+P 5300 2500
+F 0 "#PWR013" H 5300 2350 50  0001 C CNN
+F 1 "+3.3V" H 5300 2640 50  0000 C CNN
+F 2 "" H 5300 2500 50  0000 C CNN
+F 3 "" H 5300 2500 50  0000 C CNN
+	1    5300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2550 5300 2550
+Wire Wire Line
+	5300 2550 5300 2500
+Wire Wire Line
+	4450 2500 4450 2550
+Wire Wire Line
+	4450 2550 4600 2550
+$Comp
+L VCC #PWR014
+U 1 1 58CC902F
+P 5500 2500
+F 0 "#PWR014" H 5500 2350 50  0001 C CNN
+F 1 "VCC" H 5500 2650 50  0000 C CNN
+F 2 "" H 5500 2500 50  0000 C CNN
+F 3 "" H 5500 2500 50  0000 C CNN
+	1    5500 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 2500
+Text GLabel 6750 2650 0    60   Input ~ 0
+BS1
+Text GLabel 6750 2750 0    60   Input ~ 0
+BS2
+Text GLabel 6750 2850 0    60   Input ~ 0
+CS
+Text GLabel 6750 2950 0    60   Input ~ 0
+RES
+Text GLabel 6750 3050 0    60   Input ~ 0
+DC
+Text GLabel 6750 3150 0    60   Input ~ 0
+RW
+Text GLabel 6750 3250 0    60   Input ~ 0
+RD
+Text GLabel 6750 3350 0    60   Input ~ 0
+D0
+Text GLabel 6750 3450 0    60   Input ~ 0
+D1
+Text GLabel 6750 3550 0    60   Input ~ 0
+D2
+Text GLabel 6750 3650 0    60   Input ~ 0
+D3
+Text GLabel 6750 3750 0    60   Input ~ 0
+D4
+Text GLabel 6750 3850 0    60   Input ~ 0
+D5
+Text GLabel 6750 3950 0    60   Input ~ 0
+D6
+Text GLabel 6750 4050 0    60   Input ~ 0
+D7
+Wire Wire Line
+	6500 4000 6500 4150
+Wire Wire Line
+	6500 4150 6750 4150
+$Comp
+L VCC #PWR015
+U 1 1 58CC9979
+P 6450 4450
+F 0 "#PWR015" H 6450 4300 50  0001 C CNN
+F 1 "VCC" H 6450 4600 50  0000 C CNN
+F 2 "" H 6450 4450 50  0000 C CNN
+F 3 "" H 6450 4450 50  0000 C CNN
+	1    6450 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 58CC99C0
+P 6600 4450
+F 0 "#PWR016" H 6600 4200 50  0001 C CNN
+F 1 "GND" H 6600 4300 50  0000 C CNN
+F 2 "" H 6600 4450 50  0000 C CNN
+F 3 "" H 6600 4450 50  0000 C CNN
+	1    6600 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4350 6450 4350
+Wire Wire Line
+	6450 4350 6450 4450
+Wire Wire Line
+	6600 4450 6750 4450
+Text GLabel 5100 2750 2    60   Input ~ 0
+BS1
+Text GLabel 5100 2850 2    60   Input ~ 0
+BS2
+Text GLabel 5100 2950 2    60   Input ~ 0
+CS
+Text GLabel 5100 3050 2    60   Input ~ 0
+RES
+Text GLabel 5100 3150 2    60   Input ~ 0
+DC
+Text GLabel 5100 3250 2    60   Input ~ 0
+RW
+Text GLabel 5100 3350 2    60   Input ~ 0
+RD
+Text GLabel 4600 2650 0    60   Input ~ 0
+D0
+Text GLabel 4600 2750 0    60   Input ~ 0
+D1
+Text GLabel 4600 2850 0    60   Input ~ 0
+D2
+Text GLabel 4600 2950 0    60   Input ~ 0
+D3
+Text GLabel 4600 3050 0    60   Input ~ 0
+D4
+Text GLabel 4600 3150 0    60   Input ~ 0
+D5
+Text GLabel 4600 3250 0    60   Input ~ 0
+D6
+Text GLabel 4600 3350 0    60   Input ~ 0
+D7
+Wire Wire Line
+	1300 3600 1500 3600
+Connection ~ 1400 3600
+Wire Wire Line
+	1800 3500 2050 3500
+$Comp
+L +3.3V #PWR017
+U 1 1 58CCA726
+P 1800 3500
+F 0 "#PWR017" H 1800 3350 50  0001 C CNN
+F 1 "+3.3V" H 1800 3640 50  0000 C CNN
+F 2 "" H 1800 3500 50  0000 C CNN
+F 3 "" H 1800 3500 50  0000 C CNN
+	1    1800 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 2000 3950 0    60   Input ~ 0
+EN
+Text GLabel 5100 3450 2    60   Input ~ 0
+EN
+Wire Wire Line
+	2450 4050 2550 4050
+Wire Wire Line
+	2550 4050 2550 4100
+Connection ~ 3000 4100
+NoConn ~ 4600 3450
+$Comp
+L GND #PWR018
+U 1 1 58CCB319
+P 2400 2450
+F 0 "#PWR018" H 2400 2200 50  0001 C CNN
+F 1 "GND" H 2400 2300 50  0000 C CNN
+F 2 "" H 2400 2450 50  0000 C CNN
+F 3 "" H 2400 2450 50  0000 C CNN
+	1    2400 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2450 2550 2450
+Connection ~ 2400 2450
+Wire Wire Line
+	1300 2450 1650 2450
+Connection ~ 1500 2450
+$EndSCHEMATC
